@@ -1,0 +1,198 @@
+@import url('https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css');
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body
+{
+    height: 100%;
+    width: 100%;
+    font-family: 'NanumSquareRound', sans-serif;
+}
+.index
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    /*height: 500px;*/
+    padding: 40px;
+    background: rgba(0,130,114,.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,130,114,.5);
+    border-radius: 10px;
+}
+.table th,td{
+    border: 1px solid;
+}
+.index .title
+{
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 60px;
+    color: #fff;
+    text-align: center;
+}
+.index h2
+{
+    margin: 15px 0 15px;
+    padding: 0;
+    font-size: 25px;
+    color: black;
+}
+.index select
+{
+    width: 100px;
+    padding: .5em .5em;
+    border: 1px solid black;
+    font-family: 'NanumSquareRound', sans-serif;
+    background: url('/img/arrow.png') no-repeat 95% 50%;
+    background-color: #fff;
+    color: black;
+    font-size: 16px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.index input[type="radio"]
+{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
+.index input[type="radio"] + label
+{
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+.index input[type="radio"] + label::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -4px;
+    width: 21px;
+    height: 21px;
+    text-align: center;
+    background: #fafafa;
+    border: 1px solid #cacece;
+    border-radius: 100%;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+}
+.index input[type="radio"] + label:active:before, .index input[type="radio"]:checked + label:active::before
+{
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.index input[type="radio"]:checked + label::before
+{
+    background: #E9ECEE;
+    border-color: #adb8c0;
+}
+.index input[type="radio"]:checked + label::after
+{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 5px;
+    width: 13px;
+    height: 13px;
+    background: #99a1a7;
+    border-radius: 100%;
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+}
+.index input[type="text"]
+{
+    width: 50px;
+    font-size: 16px;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;    
+}
+.index #goBtn
+{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 21px;
+    font-family: 'NanumSquareRound', sans-serif;
+    background: #F18A34;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.index #excelBtn
+{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 21px;
+    font-family: 'NanumSquareRound', sans-serif;
+    background: #F18A34;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.topDiv
+{
+    margin-bottom: 10px;
+}
+.topDiv label
+{
+    font-size: 15px;
+    margin-left: 3px;
+    line-height: 20px;
+}
+.topDiv label input[type="checkbox"]
+{
+    position: relative;
+    top: 3.5px;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+}
+.botDiv label
+{
+    font-size: 15px;
+    margin-left: 3px;
+    line-height: 20px;
+}
+.botDiv label input[type="checkbox"]
+{
+    position: relative;
+    top: 3.5px;
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+}
+/* 모바일 css */
+@media screen and (max-device-width: 900px) and (orientation: portrait){
+    .index{
+        position: unset;
+        top: unset;
+        left:unset;
+        transform: unset;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+}

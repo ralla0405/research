@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>research</title>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css?ver=1.01"/>
+    </head>
+    <body>
+        <div class="index">
+            <table class="table" id="table" style="display:none;">
+                <caption>설문조사 오답데이터</caption>
+                <thead>
+                    <tr>
+                        <th>구분</th>
+                        <th>설문시간</th>
+                        <th>유형</th>
+                        <th>성별</th>
+                        <th>나이</th>
+                        <th>전체시간</th>
+                        <th colspan="2">화장실</th>
+                        <th colspan="2">비상구</th>
+                        <th colspan="2">장애인</th>
+                        <th colspan="2">분실물 보관소</th>
+                        <th colspan="2">물품보관소</th>
+                        <th colspan="2">만남의 장소</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                </tbody>
+            </table>
+            <h2 class="title">설 문 조 사</h2>
+            <form id="goForm" autocomplete="off">
+                    <h2>성 별</h2>
+                    <input type="radio" name="gender" id="w" value="woman"/><label for="w">여자</label>
+                    <input type="radio" name="gender" id="m" value="man"/><label for="m">남자</label>  
+                    <h2>나 이</h2>
+                    <input type="text" id="age"> 세
+                    <h2>유 형</h2>
+                    <select id="caseSelect" disabled>
+                        <option value="">선택</option>
+                        <!--<option value="black">검정</option>
+                        <option value="red">빨강</option>
+                        <option value="yellow">노랑</option>
+                        <option value="green">초록</option>
+                        <option value="blue">파랑</option>
+                        <option value="backblack">검정배경</option>
+                        <option value="backred">빨강배경</option>
+                        <option value="backyellow">노랑배경</option>
+                        <option value="backgreen">초록배경</option>
+                        <option value="backblue">파랑배경</option> -->
+                    </select>
+                <input type='button' id="goBtn" name='goBtn' value='시 작'/>
+                <input type="button" id="excelBtn" onclick="excelDown('table','오답데이터');" value="설문조사 다운로드">
+            </form>
+        </div>
+    </body>
+</html>
